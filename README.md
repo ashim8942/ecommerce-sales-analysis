@@ -1,37 +1,92 @@
-# ecommerce-sales-analysis
-SQL and Power BI project analyzing e-commerce sales performance and customer trends.
-# E-commerce Sales Analysis SQL Project
+# E-Commerce Sales Analysis Dashboard
 
-## Objective
-Analyze retail sales data using SQL to identify:
-- top-selling products
-- revenue trends
-- profitable categories
-- customer behavior
+## Project Overview
 
-## Tools Used
+This project analyzes e-commerce sales performance using SQL and Power BI to uncover business insights related to revenue, profitability, customer behavior, and product performance.
+
+The project includes:
+- SQL data analysis using PostgreSQL
+- KPI reporting
+- Customer segmentation
+- Revenue trend analysis
+- Interactive Power BI dashboard
+
+---
+
+## Tools & Technologies
+
 - PostgreSQL
-- pgAdmin
 - SQL
+- pgAdmin
+- Power BI
+- GitHub
 
-## Dataset
-Sample Superstore Dataset
+---
 
-## Key Analysis
-- Total Sales
-- Total Profit
+## Key Business Insights
+
+- Sales increased consistently from 2014 to 2017
+- Q4 months generated the highest revenue
+- Technology category contributed the highest sales
+- Certain products generated high sales but low profit
+- Customer segmentation identified high-value customers
+
+---
+
+## SQL Skills Demonstrated
+
+- Aggregations
+- GROUP BY
+- ORDER BY
+- CASE WHEN
+- Window Functions
+- RANK()
+- Common Table Expressions (CTEs)
+- Time-Series Analysis
+- KPI Reporting
+
+---
+
+## Dashboard Features
+
+- KPI Cards
 - Monthly Revenue Trend
-- Top Customers
-- Product Performance
+- Category-wise Sales Analysis
+- Regional Profit Analysis
+- Top Products Table
+- Interactive Filters/Slicers
 
-## Observation
+---
 
-1. Sales show strong seasonality, with revenue peaking during year-end months.
+## Project Structure
 
-2. November 2017 recorded the highest monthly revenue (~118K), indicating strong holiday sales performance.
+```text
+ecommerce-sales-analysis/
+│
+├── queries/
+├── outputs/
+├── screenshots/
+├── README.md
+└── ecommerce_dashboard.pbix
+```
 
-3. Revenue generally increased year-over-year from 2014 to 2017.
+---
 
-4. Q4 (October–December) consistently generated the highest sales across all years.
+## Dashboard Preview
 
-5. Early months (January–February) showed comparatively lower revenue.
+![Dashboard Screenshot](screenshots/dashboard_overview.png)
+
+---
+
+## Files Included
+
+- SQL query files
+- Power BI dashboard
+- Query outputs
+- Dashboard screenshots
+
+---
+
+## Author
+
+Ashim Chakraborty
