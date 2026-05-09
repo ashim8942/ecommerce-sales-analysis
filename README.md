@@ -24,6 +24,7 @@ Sample Superstore Dataset
 - Top Customers
 - Product Performance
 
+## Observation
 
 1. Sales show strong seasonality, with revenue peaking during year-end months.
 
