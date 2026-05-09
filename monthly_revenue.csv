@@ -1,0 +1,85 @@
+TRUNCATE TABLE orders;
+
+SET datestyle = 'ISO, MDY';
+
+COPY orders(
+    row_id,
+    order_id,
+    order_date,
+    ship_date,
+    ship_mode,
+    customer_id,
+    customer_name,
+    segment,
+    country,
+    city,
+    state,
+    postal_code,
+    region,
+    product_id,
+    category,
+    sub_category,
+    product_name,
+    sales,
+    quantity,
+    discount,
+    profit
+)
+FROM 'C:/csvdata/Sample - Superstore.csv'
+DELIMITER ','
+CSV HEADER
+ENCODING 'LATIN1';
+
+
+SELECT * FROM orders
+LIMIT 5;
+
+SELECT * FROM orders
+LIMIT 10;
+
+SELECT COUNT(*) AS total_rows
+FROM orders;
+
+SELECT ROUND(SUM(sales), 2) AS total_sales
+FROM orders;
+
+SELECT ROUND(SUM(profit), 2) AS total_profit
+FROM orders;
+
+SELECT
+    product_name,
+    ROUND(SUM(sales), 2) AS total_sales
+FROM orders
+GROUP BY product_name
+ORDER BY total_sales DESC
+LIMIT 10;
+
+SELECT
+    product_name,
+    ROUND(SUM(profit), 2) AS total_profit
+FROM orders
+GROUP BY product_name
+ORDER BY total_profit ASC
+LIMIT 10;
+
+SELECT
+    DATE_TRUNC('month', order_date) AS month,
+    ROUND(SUM(sales), 2) AS revenue
+FROM orders
+GROUP BY month
+ORDER BY month;
+
+
+SELECT
+    TO_CHAR(
+        DATE_TRUNC('month', order_date),
+        'YYYY-MM'
+    ) AS month,
+
+    ROUND(SUM(sales), 2) AS revenue
+
+FROM orders
+
+GROUP BY month
+
+ORDER BY month;
